@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohith Kantamaneni — AI/ML & Data Analyst</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif:  ['DM Serif Display', 'Georgia', 'serif'],
+            mono:   ['DM Mono', 'monospace'],
+            sans:   ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            rust:   '#c0440e',
+            ink:    '#0f0f0f',
+            paper:  '#f7f4ef',
+            cream:  '#ede9e1',
+            steel:  '#2c3e50',
+            muted:  '#7a7672',
+            line:   '#d4cfc7',
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.6s ease forwards',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .grid-lined {
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, #d4cfc7 39px, #d4cfc7 40px);
+    }
+    .card-shadow::before {
+      content: ''; position: absolute;
+      top: 8px; left: 8px; right: -8px; bottom: -8px;
+      border: 1px solid #d4cfc7; z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-16 py-5 bg-paper/90 backdrop-blur-md border-b border-line">
+    <span class="font-mono text-rust text-xs tracking-widest uppercase">RK / Portfolio</span>
+    <ul class="flex gap-10 list-none">
+      <li><a href="#about"      class="font-mono text-xs text-muted tracking-widest uppercase hover:text-rust transition-colors">About</a></li>
+      <li><a href="#experience" class="font-mono text-xs text-muted tracking-widest uppercase hover:text-rust transition-colors">Experience</a></li>
+      <li><a href="#projects"   class="font-mono text-xs text-muted tracking-widest uppercase hover:text-rust transition-colors">Projects</a></li>
+      <li><a href="#contact"    class="font-mono text-xs text-muted tracking-widest uppercase hover:text-rust transition-colors">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen grid grid-cols-2 items-center px-16 pt-32 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 grid-lined opacity-60 pointer-events-none"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(192,68,14,0.06) 0%, transparent 70%)"></div>
+
+    <!-- Left -->
+    <div class="relative z-10 fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="block w-8 h-px bg-rust"></span>
+        <span class="font-mono text-rust text-xs tracking-widest uppercase">Business and Data Analyst</span>
+      </div>
+      <h1 class="font-serif text-6xl leading-none mb-6">
+        Rohith<br/><em class="text-rust not-italic italic">Kantamaneni</em>
+      </h1>
+      <p class="text-muted text-lg leading-relaxed max-w-lg mb-10">
+        3 years of experience in business analysis, data reporting, and process improvement across university registrar and enterprise environments. Based in New York, NY.
+      </p>
+      <div class="flex gap-4 flex-wrap">
+        <a href="Rohith_Kantamaneni_Resume.pdf" download
+           class="inline-flex items-center gap-2 px-7 py-3 bg-rust text-white font-mono text-xs tracking-wider rounded-sm hover:bg-orange-800 transition-colors">
+          ↓ Download Resume
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 px-7 py-3 border border-ink text-ink font-mono text-xs tracking-wider rounded-sm hover:bg-ink hover:text-paper transition-colors">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <!-- Right — Stats Card -->
+    <div class="relative z-10 flex justify-end fade-up" style="transition-delay:0.2s">
+      <div class="relative bg-cream border border-line p-10 w-80 card-shadow">
+        <p class="font-mono text-muted text-xs tracking-widest uppercase mb-6">At a glance</p>
+        <div class="space-y-5">
+          <div class="pb-5 border-b border-line">
+            <div class="font-serif text-4xl text-rust">3</div>
+            <div class="text-muted text-xs mt-1">Years of experience</div>
+          </div>
+          <div class="pb-5 border-b border-line">
+            <div class="font-serif text-4xl text-rust">2</div>
+            <div class="text-muted text-xs mt-1">Clients served</div>
+          </div>
+          <div class="pb-5 border-b border-line">
+            <div class="font-serif text-4xl text-rust">2</div>
+            <div class="text-muted text-xs mt-1">GitHub projects</div>
+          </div>
+          <div>
+            <div class="font-serif text-4xl text-rust">3.63</div>
+            <div class="text-muted text-xs mt-1">GPA — M.S. SUNY Albany</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-cream px-16 py-24">
+    <div class="flex items-baseline gap-6 mb-14 fade-up">
+      <h2 class="font-serif text-4xl">About</h2>
+      <div class="flex-1 h-px bg-line ml-auto"></div>
+    </div>
+    <div class="grid grid-cols-2 gap-20 items-start">
+      <div class="space-y-5 fade-up">
+        <p class="text-steel leading-relaxed">
+          I am a Business and Data Analyst with around 3 years of experience working across
+          student information systems, enterprise data platforms, and process improvement
+          initiatives. My work sits at the crossover of functional analysis and technical
+          execution — I can gather requirements, write SQL, build reports, run QA cycles, and
+          translate what the business needs into something a development team can actually act on.
+        </p>
+        <p class="text-steel leading-relaxed">
+          Currently I am supporting university registrar operations at Velosio, working with
+          PeopleSoft Campus Solutions day to day — maintaining configurations, writing queries,
+          leading testing cycles, and acting as the bridge between the registrar team and the
+          technical side. Before that at Hitachi I was focused on data validation, Excel
+          reporting, and keeping process documentation solid enough that the team was not
+          relying on one person to hold everything together.
+        </p>
+        <p class="text-steel leading-relaxed">
+          I completed my Master of Science in Information Management and Technology at SUNY
+          Albany in December 2025 with a GPA of 3.63. I am currently on OPT and fully
+          authorized to work in the United States without any employer sponsorship. I also
+          qualify for a 2-year STEM OPT extension, which means I can work here for the next
+          several years without disruption.
+        </p>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-2 fade-up" style="transition-delay:0.15s">
+        <div class="p-4 border border-line -mr-px -mb-px">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Data and Reporting</div>
+          <div class="text-muted text-sm leading-relaxed">SQL, PeopleSoft Query, Excel (Pivot Tables, VLOOKUP, Power Query), Data Warehouse Reporting</div>
+        </div>
+        <div class="p-4 border border-line -mb-px">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Systems</div>
+          <div class="text-muted text-sm leading-relaxed">PeopleSoft Campus Solutions, Student Information Systems, MS Office Suite (Word, Excel, PowerPoint, Visio, Outlook)</div>
+        </div>
+        <div class="p-4 border border-line -mr-px -mb-px">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Analysis</div>
+          <div class="text-muted text-sm leading-relaxed">Requirements Gathering, QA Testing, Test Plan Development, Process Documentation, Gap Analysis</div>
+        </div>
+        <div class="p-4 border border-line -mb-px">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Project Management</div>
+          <div class="text-muted text-sm leading-relaxed">Project Planning, Timeline Tracking, Stakeholder Communication, Meeting Facilitation, User Training</div>
+        </div>
+        <div class="p-4 border border-line -mr-px">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Technical</div>
+          <div class="text-muted text-sm leading-relaxed">Python, SQL, Bash, ETL Pipeline Design, Data Validation, AWS (S3, Glue), Pandas, NumPy</div>
+        </div>
+        <div class="p-4 border border-line">
+          <div class="font-mono text-rust text-xs tracking-widest uppercase mb-2">Work Authorization</div>
+          <div class="text-muted text-sm leading-relaxed">OPT — Authorized to work in the US. STEM OPT extension eligible (2 additional years). No sponsorship required.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="px-16 py-24">
+    <div class="flex items-baseline gap-6 mb-14 fade-up">
+      <h2 class="font-serif text-4xl">Experience</h2>
+      <div class="flex-1 h-px bg-line ml-auto"></div>
+    </div>
+
+    <!-- Client 1: Velosio -->
+    <div class="grid grid-cols-[200px_1fr] gap-12 py-10 border-t border-line fade-up">
+      <div>
+        <div class="font-mono text-rust text-xs mb-1 uppercase tracking-widest">Client 1</div>
+        <div class="font-semibold text-sm text-ink">Velosio</div>
+        <div class="text-muted text-xs mb-1">Dublin, OH</div>
+        <div class="text-muted text-xs mb-2">2025 — Present</div>
+        <span class="font-mono text-xs px-2 py-1 border border-line text-muted tracking-widest uppercase">Remote</span>
+      </div>
+      <div>
+        <h3 class="font-serif text-2xl text-ink mb-4">Business and Data Analyst</h3>
+        <ul class="space-y-2">
+          <li class="text-steel text-sm leading-relaxed">Gather and document business requirements from stakeholders across multiple university units, translating them into clear functional specs for PeopleSoft configuration teams.</li>
+          <li class="text-steel text-sm leading-relaxed">Maintain PeopleSoft Campus Solutions configurations including student groups, checklist items, and service indicator codes, keeping records accurate and current.</li>
+          <li class="text-steel text-sm leading-relaxed">Lead QA testing cycles for PeopleSoft system updates, writing test scenarios, executing test plans, and logging defects before changes go to production.</li>
+          <li class="text-steel text-sm leading-relaxed">Write and maintain SQL queries and PeopleSoft reports to support enrollment tracking, retention analysis, and operational reporting for university registrar staff.</li>
+          <li class="text-steel text-sm leading-relaxed">Serve as liaison between registrar business units and technology teams, making sure both sides understand what is being built and why.</li>
+          <li class="text-steel text-sm leading-relaxed">Keep systems and process documentation current, including job aids and training materials that help staff work through new or updated workflows.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Client 2: Hitachi -->
+    <div class="grid grid-cols-[200px_1fr] gap-12 py-10 border-t border-b border-line fade-up">
+      <div>
+        <div class="font-mono text-rust text-xs mb-1 uppercase tracking-widest">Client 2</div>
+        <div class="font-semibold text-sm text-ink">Hitachi</div>
+        <div class="text-muted text-xs mb-1">Onsite</div>
+        <div class="text-muted text-xs mb-2">2024 — 2025</div>
+        <span class="font-mono text-xs px-2 py-1 border border-line text-muted tracking-widest uppercase">Onsite</span>
+      </div>
+      <div>
+        <h3 class="font-serif text-2xl text-ink mb-4">Data Analyst</h3>
+        <ul class="space-y-2">
+          <li class="text-steel text-sm leading-relaxed">Pulled and validated data from enterprise systems using SQL and Python to support reporting and analysis requests from business stakeholders.</li>
+          <li class="text-steel text-sm leading-relaxed">Created Excel based reports with pivot tables, charts, and formulas to help teams track KPIs and spot trends in their data.</li>
+          <li class="text-steel text-sm leading-relaxed">Kept data processes, report logic, and system configurations documented so the team was not dependent on one person holding all the institutional knowledge.</li>
+          <li class="text-steel text-sm leading-relaxed">Ran data quality checks and validation scripts to catch issues early before reports were shared with decision makers.</li>
+          <li class="text-steel text-sm leading-relaxed">Supported project coordination across multiple workstreams, tracking progress, flagging blockers, and keeping documentation up to date.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-cream px-16 py-24">
+    <div class="flex items-baseline gap-6 mb-14 fade-up">
+      <h2 class="font-serif text-4xl">Projects</h2>
+      <div class="flex-1 h-px bg-line ml-auto"></div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+
+      <a href="https://github.com/Rohith-0212/student-records-data-quality-reporting" target="_blank"
+         class="group relative bg-paper border border-line p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-200 block">
+        <span class="absolute top-6 right-6 font-mono text-xs text-rust opacity-0 group-hover:opacity-100 transition-opacity">↗ GitHub</span>
+        <div class="font-mono text-rust text-xs tracking-widest uppercase mb-3">Data Quality / Reporting</div>
+        <h3 class="font-serif text-xl text-ink mb-3 leading-snug">Student Records Data Quality and Reporting Automation</h3>
+        <p class="text-muted text-sm leading-relaxed mb-6">QA audit of student record data across PeopleSoft tables, identifying inconsistencies in enrollment status codes and service indicators. Built a SQL query suite to automate weekly enrollment and retention snapshots, cutting manual report prep time for the registrar team.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">SQL</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">PeopleSoft</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">PeopleSoft Query</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">QA Testing</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">Excel</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Rohith-0212/peoplesoft-process-improvement-training" target="_blank"
+         class="group relative bg-paper border border-line p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-200 block">
+        <span class="absolute top-6 right-6 font-mono text-xs text-rust opacity-0 group-hover:opacity-100 transition-opacity">↗ GitHub</span>
+        <div class="font-mono text-rust text-xs tracking-widest uppercase mb-3">Process Improvement / Training</div>
+        <h3 class="font-serif text-xl text-ink mb-3 leading-snug">PeopleSoft Process Improvement and User Training Initiative</h3>
+        <p class="text-muted text-sm leading-relaxed mb-6">Analyzed PeopleSoft batch processes and registration workflows to find bottlenecks. Delivered three system enhancements through the full lifecycle from functional specs and UAT through go-live, with job aids and training sessions for registrar staff.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">PeopleSoft</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">Functional Specs</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">UAT</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">ServiceNow</span>
+          <span class="font-mono text-xs px-2 py-1 border border-line text-muted">Visio</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="px-16 py-24">
+    <div class="flex items-baseline gap-6 mb-14 fade-up">
+      <h2 class="font-serif text-4xl">Education</h2>
+      <div class="flex-1 h-px bg-line ml-auto"></div>
+    </div>
+    <div class="grid grid-cols-[200px_1fr] gap-12 py-10 border-t border-b border-line fade-up">
+      <div class="font-mono text-rust text-xs pt-1">Jan 2024 to Dec 2025</div>
+      <div>
+        <div class="font-serif text-3xl text-ink mb-2">Master of Science</div>
+        <div class="text-muted text-sm mb-1">Information Management and Technology</div>
+        <div class="text-muted text-sm mb-3">State University of New York at Albany &nbsp;·&nbsp; New York, USA</div>
+        <div class="font-mono text-rust text-xs">GPA: 3.63 / 4.0 &nbsp;·&nbsp; Completed Dec 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-ink px-16 py-24">
+    <div class="flex items-baseline gap-6 mb-14 fade-up">
+      <h2 class="font-serif text-4xl text-paper">Contact</h2>
+      <div class="flex-1 h-px bg-neutral-800 ml-auto"></div>
+    </div>
+    <div class="grid grid-cols-2 gap-20 items-center">
+      <div class="fade-up">
+        <p class="font-serif text-3xl leading-snug text-paper mb-6">
+          Open to <em class="text-rust italic">Business Analyst</em><br/>and Data Analyst roles across the US.
+        </p>
+        <p class="text-neutral-500 text-sm leading-relaxed">
+          Based in New York, NY. Currently on OPT and authorized to work in the US without sponsorship. STEM OPT extension eligible for 2 additional years. Available for full-time roles immediately.
+        </p>
+      </div>
+      <div class="space-y-4 fade-up" style="transition-delay:0.15s">
+        <a href="tel:+15187305232" class="flex items-center gap-4 px-6 py-4 border border-neutral-800 hover:border-rust hover:bg-rust/5 transition-all">
+          <span class="font-mono text-xs text-rust tracking-widest uppercase w-16">Phone</span>
+          <span class="text-neutral-400 text-sm">+1 (518) 730-5232</span>
+        </a>
+        <a href="mailto:krohith0212@gmail.com" class="flex items-center gap-4 px-6 py-4 border border-neutral-800 hover:border-rust hover:bg-rust/5 transition-all">
+          <span class="font-mono text-xs text-rust tracking-widest uppercase w-16">Email</span>
+          <span class="text-neutral-400 text-sm">krohith0212@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/rohith-k-851b182a1/" target="_blank"
+           class="flex items-center gap-4 px-6 py-4 border border-neutral-800 hover:border-rust hover:bg-rust/5 transition-all">
+          <span class="font-mono text-xs text-rust tracking-widest uppercase w-16">LinkedIn</span>
+          <span class="text-neutral-400 text-sm">rohith-k-851b182a1</span>
+        </a>
+        <a href="https://github.com/Rohith-0212" target="_blank"
+           class="flex items-center gap-4 px-6 py-4 border border-neutral-800 hover:border-rust hover:bg-rust/5 transition-all">
+          <span class="font-mono text-xs text-rust tracking-widest uppercase w-16">GitHub</span>
+          <span class="text-neutral-400 text-sm">Rohith-0212</span>
+        </a>
+        <a href="Rohith_Kantamaneni_Resume.pdf" download
+           class="flex items-center gap-4 px-6 py-4 border border-neutral-800 hover:border-rust hover:bg-rust/5 transition-all">
+          <span class="font-mono text-xs text-rust tracking-widest uppercase w-16">Resume</span>
+          <span class="text-neutral-400 text-sm">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink border-t border-neutral-900 px-16 py-6 flex justify-between items-center">
+    <p class="font-mono text-xs text-neutral-600 tracking-wider">© 2026 Rohith Kantamaneni</p>
+    <p class="font-mono text-xs text-neutral-600 tracking-wider">Built with Tailwind CSS &nbsp;·&nbsp; Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    setTimeout(() => document.querySelectorAll('#hero .fade-up').forEach(el => el.classList.add('visible')), 100);
+  </script>
+</body>
+</html>
